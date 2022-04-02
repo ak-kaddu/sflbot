@@ -1004,7 +1004,7 @@ else if (config.WORKTYPE == 'public') {
             .page(match[1]);
 
         var info = await arama.rawContent();
-        await message.client.sendMessage(message.jid, info, MessageType.text, quoted: message.data);
+        await message.client.sendMessage(message.jid, info, MessageType.text, {quoted: message.data});
         await reply.delete();
     }));
 
